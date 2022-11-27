@@ -66,13 +66,14 @@ static const char unknown_str[] = "n/a";
 
 static const struct arg args[] = {
         /* function format          argument */
-        { cpu_perc,             " %3s%% CPU | ",        NULL },
-        { ram_used,             "RAM %.5s/",            NULL },
-        { ram_total,            "%.5s | ",              NULL },
-        { wifi_essid,           "W: %s ",               "wlp4s0" },
-        { ipv4,                 "%s | ",                "wlp4s0" },
-        { battery_state,        "%s ",                  "BAT0" },
-        { battery_remaining,    "%s | ",                "BAT0" },
-        { temp,                 "CPU %s°| ",            "/sys/class/thermal/thermal_zone0/temp" },
-        { datetime,             "%s ",                  "%a, %d/%m %H:%M" },
+        {cpu_perc,          " \uF85A%3s%% | ", NULL},
+        {ram_used,          "\uF2DB  %3s/",   NULL},
+        {ram_total,         "%.5s | ",        NULL},
+        {wifi_essid,        "直  %s ",         "wlp4s0"},
+        {ipv4,              "%s | ",          "wlp4s0"},
+        {battery_state,     "%s ",            "BAT0"},
+        {battery_perc,      "%s%% ",          "BAT0"},
+        {battery_remaining, "(%s) | ",         "BAT0"},
+        {temp,              "\uF2C7 %s°| ",   "/sys/class/thermal/thermal_zone0/temp"},
+        {datetime,          "%s ",            "%a, %d/%m %H:%M"},
 };
